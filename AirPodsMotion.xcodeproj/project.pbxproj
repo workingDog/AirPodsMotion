@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C79B7A1B2E8E306B00E73929 /* toy_drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C79B7A1A2E8E306B00E73929 /* toy_drummer.usdz */; };
 		C7EB083A2E8DFEF4004A08E3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C7EB08392E8DFEF4004A08E3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C79B7A1A2E8E306B00E73929 /* toy_drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = toy_drummer.usdz; sourceTree = "<group>"; };
 		C7EB08252E8DFE0E004A08E3 /* AirPodsMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPodsMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EB08392E8DFEF4004A08E3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +41,7 @@
 			children = (
 				C7EB08392E8DFEF4004A08E3 /* README.md */,
 				C7EB08272E8DFE0E004A08E3 /* AirPodsMotion */,
+				C79B7A1A2E8E306B00E73929 /* toy_drummer.usdz */,
 				C7EB08262E8DFE0E004A08E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EB083A2E8DFEF4004A08E3 /* README.md in Resources */,
+				C79B7A1B2E8E306B00E73929 /* toy_drummer.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
