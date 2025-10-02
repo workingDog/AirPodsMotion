@@ -12,5 +12,9 @@ on macOS do:
 
     System Settings → Bluetooth → AirPods (Options) → Automatic Ear Detection → Off
 
+Similarly for iOS.
 
-Could not make the App work on iOS, only on Mac Catalyst.
+Note, on iPhone ensure you have set the *Settings* in the 
+
+    Privacy & Security -> Motion & Fitness -> Fitness Tracking -> enabled
+      
