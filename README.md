@@ -2,7 +2,7 @@
 
 An AirPods Pro motion detection in SwiftUI code.
 
-This basic App is based on the code from  [AirPodsPro-Motion-Sampler](https://github.com/tukuyo/AirPodsPro-Motion-Sampler) using RealityKit in SwiftUI.
+This basic App is based on the code from  [AirPodsPro-Motion-Sampler](https://github.com/tukuyo/AirPodsPro-Motion-Sampler), but  using RealityKit in SwiftUI.
 
 To make this work, add
 *Privacy - Motion Usage Description* to the **Info.plist**.
