@@ -73,10 +73,10 @@ class MotionManager {
     
     func quaternionAttitude() -> simd_quatf {
         if let attitude {
-            let s = 1.0 // <-- future, to adjust the sensitivity 
-            let qx = simd_quatf(angle: Float(attitude.pitch * s), axis: [1, 0, 0])
-            let qy = simd_quatf(angle: Float(attitude.yaw * s),   axis: [0, 1, 0])
-            let qz = simd_quatf(angle: Float(attitude.roll * s),  axis: [0, 0, 1])
+            let s = 2.0 // <--- to adjust the sensitivity
+            let qx = simd_quatf(angle: -Float(attitude.pitch * s), axis: [1, 0, 0])
+            let qy = simd_quatf(angle: -Float(attitude.yaw * s),   axis: [0, 1, 0])
+            let qz = simd_quatf(angle: -Float(attitude.roll * s),  axis: [0, 0, 1])
             return qy * qx * qz // Note: order matters
         } 
         return simd_quatf()
