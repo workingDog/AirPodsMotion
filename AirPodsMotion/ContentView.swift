@@ -35,6 +35,11 @@ struct ContentView: View {
                 light.light.intensity = 12000
                 light.orientation = simd_quatf(angle: -.pi/4, axis: [1,0,0])
                 anchor.addChild(light)
+
+                // animate the model, just for fun
+                for anim in entity.availableAnimations {
+                    entity.playAnimation(anim.repeat(duration: .infinity), transitionDuration: 1.25, startsPaused: false)
+                }
             }
         } update: { content in
             // Update rotation every frame when state changes
@@ -54,8 +59,7 @@ class MotionManager {
     var attitude: CMAttitude?
     
     init() {
-        let status = CMHeadphoneMotionManager.authorizationStatus()
-        print("\n----> status: \(status)")
+        print("\n----> status: \(CMHeadphoneMotionManager.authorizationStatus())")
         if manager.isDeviceMotionAvailable {
             print("----> Device motion available")
             manager.startDeviceMotionUpdates(to: .main) { motion, error in
