@@ -2,13 +2,13 @@
 
 An AirPods Pro motion detection in SwiftUI code.
 
-Using RealityKit in SwiftUI controlling Apple *toy_drummer* model with the AirPods.
+Using *RealityKit* in *SwiftUI* controlling Apple *toy_drummer* model with the AirPods.
 
-To make this work, add
+In this basic App note the addition of 
 *Privacy - Motion Usage Description* to the **Info.plist**.
 
-To move the AirPods while in your hands, not in your ears,
-on macOS do:
+You can move your AirPods while wearing them in your ears.
+To move them while holding them in your hands on macOS, do: 
 
     System Settings → Bluetooth → AirPods (Options) → Automatic Ear Detection → Off
 
