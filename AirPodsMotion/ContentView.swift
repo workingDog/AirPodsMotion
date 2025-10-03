@@ -32,7 +32,7 @@ struct ContentView: View {
                 
                 // Add a light so it’s not black
                 let light = DirectionalLight()
-                light.light.intensity = 15000
+                light.light.intensity = 12000
                 light.orientation = simd_quatf(angle: -.pi/4, axis: [1,0,0])
                 anchor.addChild(light)
             }
@@ -51,7 +51,7 @@ struct ContentView: View {
 @Observable
 class MotionManager {
     private let manager = CMHeadphoneMotionManager()
-    var attitude: CMAttitude = CMAttitude()
+    var attitude: CMAttitude?
     
     init() {
         let status = CMHeadphoneMotionManager.authorizationStatus()
@@ -68,11 +68,14 @@ class MotionManager {
     }
     
     func quaternionAttitude() -> simd_quatf {
-        let s = 1.0
-        let qx = simd_quatf(angle: Float(attitude.pitch * s), axis: [1, 0, 0])
-        let qy = simd_quatf(angle: Float(attitude.yaw * s),   axis: [0, 1, 0])
-        let qz = simd_quatf(angle: Float(attitude.roll * s),  axis: [0, 0, 1])
-        return qy * qx * qz // Note: order matters
+        if let attitude {
+            let s = 1.0 // <-- future, to adjust the sensitivity 
+            let qx = simd_quatf(angle: Float(attitude.pitch * s), axis: [1, 0, 0])
+            let qy = simd_quatf(angle: Float(attitude.yaw * s),   axis: [0, 1, 0])
+            let qz = simd_quatf(angle: Float(attitude.roll * s),  axis: [0, 0, 1])
+            return qy * qx * qz // Note: order matters
+        } 
+        return simd_quatf()
     }
     
     deinit {
