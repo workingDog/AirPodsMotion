@@ -2,7 +2,7 @@
 
 An AirPods Pro motion detection in SwiftUI code.
 
-Using *RealityKit* in *SwiftUI* controlling Apple *toy_drummer* model with the AirPods.
+Using *RealityKit* in *SwiftUI* controlling Apple *robot* model with the AirPods.
 
 In this basic App note the addition of 
 *Privacy - Motion Usage Description* to the **Info.plist**.

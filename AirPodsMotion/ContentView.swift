@@ -16,8 +16,8 @@ struct ContentView: View {
     var body: some View {
         RealityView { content in
             // Load the model from bundle
-            if let entity = try? await Entity(named: "toy_drummer.usdz") {
-                entity.scale = [0.07, 0.07, 0.07]
+            if let entity = try? await Entity(named: "robot.usdz") {
+                entity.scale = [0.03, 0.03, 0.03]
                 entity.position = [0, -0.5, 0]
                 
                 // Wrap it in an anchor so it's visible in world space
@@ -44,7 +44,7 @@ struct ContentView: View {
         } update: { content in
             // Update rotation every frame when state changes
             if let entity = content.entities.first,
-               let model = entity.findEntity(named: "toy_drummer_idle") {
+               let model = entity.findEntity(named: "robot_walk_idle") {
                 model.orientation = motionManager.quaternionAttitude()
             }
         }
