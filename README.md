@@ -1,10 +1,10 @@
 #  AirPodsMotion
 
-An AirPods Pro motion detection in SwiftUI code.
+Controlling a 3D model using AirPods in SwiftUI.
 
-Using *RealityKit* in *SwiftUI* controlling Apple *robot* model with the AirPods.
+Using *RealityKit* in *SwiftUI* to control the Apple *robot* model with the movements of your AirPods.
 
-In this basic App note the addition of 
+In this basic App, note the addition of 
 *Privacy - Motion Usage Description* to the **Info.plist**.
 
 You can move your AirPods while wearing them in your ears.
@@ -16,5 +16,5 @@ Similarly for iOS.
 
 Note, on iPhone ensure you have set the *Settings* in the 
 
-    Privacy & Security -> Motion & Fitness -> Fitness Tracking -> enabled
+    Privacy & Security -> Motion & Fitness -> Fitness Tracking -> ON
       
